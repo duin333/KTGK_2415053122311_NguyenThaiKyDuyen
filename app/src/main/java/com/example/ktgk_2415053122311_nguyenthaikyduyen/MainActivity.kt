@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.title = tieuDe_311
         val edtTen_311 = findViewById<EditText>(R.id.edtTen_311)
         findViewById<Button>(R.id.btnThem_311).setOnClickListener {
-            Toast.makeText(this, if (edtTen_311.text.isBlank()) "Nhap ten" else "Da them", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, if (edtTen_311.text.isBlank()) "Nhap ten" else "Da them: ${edtTen_311.text}.Text", Toast.LENGTH_SHORT).show()
         }
         findViewById<Button>(R.id.btnXem_311).setOnClickListener {
             startActivity(Intent(this, ChiTietChiTieuActivity::class.java))
