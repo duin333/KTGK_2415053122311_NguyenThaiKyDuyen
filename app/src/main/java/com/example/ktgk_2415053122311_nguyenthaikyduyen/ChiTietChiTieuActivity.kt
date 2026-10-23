@@ -20,6 +20,7 @@ class ChiTietChiTieuActivity : AppCompatActivity() {
         ten_311 = intent.getStringExtra("ten") ?: ""
         tien_311 = intent.getLongExtra("tien", 0L)
         ghi_311 = intent.getStringExtra("ghi") ?: ""
+        if (ten_311.isBlank() || tien_311 <= 0L) {tv_311.text = "Thieu ten hoac so tien sai"; return}
         hienThi_311()
     }
 }
